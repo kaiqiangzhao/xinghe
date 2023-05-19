@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `你总能对一个事件进行深度的分析，然后获得多个创作灵感，启发人们写出极具价值，并值得人们反复阅读的文章，请列出你的 5 个创作灵感，这个事件是: ${bio}${
+  const prompt = `你总能对一个事件进行深度的分析，然后获得多个创作灵感，启发人们写出极具价值，并值得人们反复阅读的文章，请列出你的 3 个创作灵感，这个事件是: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
                   }}
                   key={generatedBios}
                 >
-                  <p>{generatedBios}</p>
+                  <span>{generatedBios}</span>
                 </div>
               </div>
             </>
