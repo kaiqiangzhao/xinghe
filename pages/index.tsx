@@ -61,7 +61,7 @@ const Home: NextPage = () => {
       const chunkValue = decoder.decode(value);
       setGeneratedBios((prev) => prev + chunkValue);
     }
-    scrollToBios();
+    // scrollToBios();
     setLoading(false);
   };
 
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
                   }}
                   key={generatedBios}
                 >
-                  <span>{generatedBios}</span>
+                  <p>{generatedBios}</p>
                 </div>
               </div>
             </>
