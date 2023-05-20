@@ -80,9 +80,10 @@ const Home: NextPage = () => {
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
-              src="/1-black.png"
+              src=""
               width={30}
               height={30}
+              alt="1 icon"
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
