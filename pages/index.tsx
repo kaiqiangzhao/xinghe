@@ -141,7 +141,7 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  可以从以下几个方面进行创作
+                  创作灵感
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto  whitespace-pre-wrap">
