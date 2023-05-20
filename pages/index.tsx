@@ -74,12 +74,9 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <h1 className="sm:text-6xl text-4xl max-w-[608px] font-bold text-slate-900">
+        <h2 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
           使用 ChatGPT 生成创作灵感
-        </h1>
-        <span className="text-slate-500">
-          (输入热点事件，生成关于这个事件的创作灵感)
-        </span>
+        </h2>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             {/*<Image*/}
@@ -93,7 +90,7 @@ const Home: NextPage = () => {
               输入事件{" "}
               <span className="text-slate-500">
                 (如：脱口秀演员因不当言论被热议)
-              </span>.
+              </span>
             </p>
           </div>
           <textarea
