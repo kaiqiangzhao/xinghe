@@ -74,7 +74,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <h2 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
+        <h2 className="sm:text-6xl text-4xl max-w-[808px] font-bold text-slate-900">
           使用 ChatGPT 生成创作灵感
         </h2>
         <div className="max-w-xl w-full">
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  创作灵感
+                  可以从以下几个方面进行创作
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto  whitespace-pre-wrap">
