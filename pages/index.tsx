@@ -24,13 +24,9 @@ const Home: NextPage = () => {
     }
   };
 
+  let topic = bio || defultDesc;
+
   const generateBio = async (e: any) => {
-
-    let topic = bio;
-    if(topic == ""){
-      topic = defultDesc
-    }
-
     let prompt = `你总能对一个事件进行深度的分析，然后获得多个创作灵感，启发人们写出极具价值，并值得人们反复阅读的文章，请列出你的 3 个创作灵感，这个事件是: ${bio}${
         topic.slice(-1) === "." ? "" : "."
     }`;
@@ -94,6 +90,7 @@ const Home: NextPage = () => {
             {/*  className="mb-5 sm:mb-0"*/}
             {/*/>*/}
             <p className="text-left font-medium">
+              输入人物或事件
               <span className="text-slate-500"></span>
             </p>
           </div>
@@ -103,7 +100,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "输入人物或事件，如：埃隆·马斯克、脱口秀演员因不当言论被热议"
+              "如：埃隆·马斯克、脱口秀演员因不当言论被热议"
             }
           />
           {/*<div className="flex mb-5 items-center space-x-3">*/}
