@@ -94,7 +94,6 @@ const Home: NextPage = () => {
             {/*  className="mb-5 sm:mb-0"*/}
             {/*/>*/}
             <p className="text-left font-medium">
-              输入人物或事件
               <span className="text-slate-500"></span>
             </p>
           </div>
@@ -104,7 +103,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "如：埃隆·马斯克、脱口秀演员因不当言论被热议"
+              "输入人物或事件，如：埃隆·马斯克、脱口秀演员因不当言论被热议"
             }
           />
           {/*<div className="flex mb-5 items-center space-x-3">*/}
