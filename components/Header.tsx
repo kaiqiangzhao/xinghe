@@ -24,7 +24,7 @@ export default function Header() {
         <Image
           alt="Vercel Icon"
           src="/xinghelogo.png"
-          className="sm:w-8 sm:h-[32px] w-8 h-[32px]"
+          className="sm:w-8 sm:h-[28px] w-8 h-[28px]"
           width={32}
           height={32}
         />
