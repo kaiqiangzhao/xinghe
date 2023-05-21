@@ -20,7 +20,7 @@ export default function Footer() {
           rel="noreferrer"
           className="hover:underline transition underline-offset-2"
         >
-          Vercel Edge Functions.
+          Vercel
         </a>
       </div>
       {/*<div className="flex space-x-4 pb-4 sm:pb-0">*/}
