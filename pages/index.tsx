@@ -27,7 +27,7 @@ const Home: NextPage = () => {
   const generateBio = async (e: any) => {
 
     let topic = bio;
-    if(topic === ""){
+    if(topic == ""){
       topic = defultDesc
     }
 
