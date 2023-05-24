@@ -76,10 +76,11 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <h2 className="sm:text-6xl text-4xl max-w-[808px] font-bold text-slate-900">
+      <main className="flex flex-1 w-full flex-col items-center text-center px-4 mt-12 sm:mt-24">
+        <h2 className="sm:text-5xl text-4xl max-w-[808px] font-bold text-slate-900">
           使用 ChatGPT 生成创作灵感
         </h2>
+        {/*<p className=" text-slate-400 mt-2"></p>*/}
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             {/*<Image*/}
@@ -89,10 +90,10 @@ const Home: NextPage = () => {
             {/*  alt="1 icon"*/}
             {/*  className="mb-5 sm:mb-0"*/}
             {/*/>*/}
-            <p className="text-left font-medium">
-              输入人物或事件
-              <span className="text-slate-500"></span>
-            </p>
+            {/*<p className="text-left font-medium">*/}
+            {/*  输入人物或事件*/}
+            {/*  <span className="text-slate-500"></span>*/}
+            {/*</p>*/}
           </div>
           <textarea
             value={bio}
@@ -100,7 +101,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "如：埃隆·马斯克、脱口秀演员因不当言论被热议"
+              "输入某个人物、事件等"
             }
           />
           {/*<div className="flex mb-5 items-center space-x-3">*/}
@@ -113,7 +114,7 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-1 mt-1 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
               获取创作灵感 &rarr;

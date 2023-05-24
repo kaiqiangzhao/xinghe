@@ -3,32 +3,27 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center w-full mt-5 border-b-2 pb-7 sm:px-4 px-2">
-      <Link href="/" className="flex space-x-3">
-        {/*<Image*/}
-        {/*  alt="header text"*/}
-        {/*  src="/writingIcon.png"*/}
-        {/*  className="sm:w-12 sm:h-12 w-8 h-8"*/}
-        {/*  width={32}*/}
-        {/*  height={32}*/}
-        {/*/>*/}
-        <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight">
-            创作岛
-        </h1>
-      </Link>
-      <a
-        href=""
-        target="_blank"
-        rel="noreferrer"
-      >
+    <header className="flex justify-between items-center border-b w-full mt-5 border-b-1 pb-7 sm:px-4 px-2">
+      <Link href="/" className="flex space-x-3 items-center">
         <Image
-          alt="Vercel Icon"
+          alt="header text"
           src="/xinghelogo.png"
-          className="sm:w-8 sm:h-[28px] w-8 h-[28px]"
-          width={32}
-          height={32}
+          className="sm:w-5 sm:h-5 w-5 h-5"
+          width={20}
+          height={20}
         />
-      </a>
+        <h2 className="sm:text-1xl text-1xl font-bold ml-2 tracking-tight">
+            创作岛
+        </h2>
+      </Link>
+        <a
+            href="https://wenjuan.feishu.cn/m?t=sWFGJ45TTJMi-uqlt"
+            target="_blank"
+            rel="noreferrer"
+            className="sm:text-1xl text-1xl hover:underline transition underline-offset-2 font-bold"
+        >
+            建议反馈
+        </a>
     </header>
   );
 }
