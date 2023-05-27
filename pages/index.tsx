@@ -4,10 +4,12 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import DropDown, { VibeType } from "../components/DropDown";
+import MyDisclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
 import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -83,17 +85,6 @@ const Home: NextPage = () => {
         {/*<p className=" text-slate-400 mt-2"></p>*/}
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
-            {/*<Image*/}
-            {/*  src=""*/}
-            {/*  width={30}*/}
-            {/*  height={30}*/}
-            {/*  alt="1 icon"*/}
-            {/*  className="mb-5 sm:mb-0"*/}
-            {/*/>*/}
-            {/*<p className="text-left font-medium">*/}
-            {/*  输入人物或事件*/}
-            {/*  <span className="text-slate-500"></span>*/}
-            {/*</p>*/}
           </div>
           <textarea
             value={bio}
@@ -104,14 +95,6 @@ const Home: NextPage = () => {
               "输入某个人物、事件等"
             }
           />
-          {/*<div className="flex mb-5 items-center space-x-3">*/}
-          {/*  <Image src="/2-black.png" width={30} height={30} alt="1 icon" />*/}
-          {/*  <p className="text-left font-medium">Select your vibe.</p>*/}
-          {/*</div>*/}
-          {/*<div className="block">*/}
-          {/*  <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />*/}
-          {/*</div>*/}
-
           {!loading && (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-1 mt-1 hover:bg-black/80 w-full"
@@ -140,7 +123,7 @@ const Home: NextPage = () => {
             <>
               <div>
                 <h2
-                  className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
+                  className="sm:text-3xl text-2xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
                   创作灵感
@@ -162,6 +145,20 @@ const Home: NextPage = () => {
               </div>
             </>
           )}
+        </div>
+        <div className="max-w-xl w-full">
+          <h2
+              className="sm:text-3xl text-2xl font-bold text-slate-900 mx-auto"
+              ref={bioRef}
+          >
+            热点事件
+          </h2>
+          <div className="flex justify-center text-slate-400 mt-1 text-sm">
+            周更（优化中），点击 <ChevronRightIcon className='h-5 w-5'></ChevronRightIcon> 即可查看创作灵感
+          </div>
+          <div className="max-w-xl w-full text-left">
+            <MyDisclosure></MyDisclosure>
+          </div>
         </div>
       </main>
       <Footer />
