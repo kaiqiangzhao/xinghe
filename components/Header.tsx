@@ -8,9 +8,8 @@ export default function Header() {
         <Image
           alt="header text"
           src="/xinghelogo.png"
-          className="sm:w-5 sm:h-5 w-5 h-5"
           width={20}
-          height={20}
+          height={24}
         />
         <h2 className="sm:text-1xl text-1xl font-bold ml-2 tracking-tight">
             创作岛
