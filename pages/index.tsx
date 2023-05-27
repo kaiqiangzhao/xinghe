@@ -154,7 +154,7 @@ const Home: NextPage = () => {
             热点事件
           </h2>
           <div className="flex justify-center text-slate-400 mt-1 text-sm">
-            周更（优化中），点击 <ChevronRightIcon className='h-5 w-5'></ChevronRightIcon> 即可查看创作灵感
+            每周一更新（优化中），点击 <ChevronRightIcon className='h-5 w-5'></ChevronRightIcon> 即可查看创作灵感
           </div>
           <div className="max-w-xl w-full text-left">
             <MyDisclosure></MyDisclosure>
