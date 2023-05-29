@@ -14,7 +14,7 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid'
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Professional");
+  const [vibe, setVibe] = useState<VibeType>("文章");
   const [generatedBios, setGeneratedBios] = useState<string>("");
   const defultDesc = "脱口秀演员因不当言论被热议";
 
@@ -29,10 +29,11 @@ const Home: NextPage = () => {
   let topic = bio || defultDesc;
 
   const generateBio = async (e: any) => {
-    let prompt = `你总能对一个事件进行深度的分析，然后获得多个创作灵感，启发人们写出极具价值，并值得人们反复阅读的文章，请列出你的 3 个创作灵感，这个事件是: ${topic}${
+    let prompt = `你总能对一个事件进行深度的分析，然后获得多个创作灵感，启发人们创作出极具价值的内容，请列出 3 个内容形式是「${
+      vibe === "动态" ? "动态（在社交媒体上发布的感想）": vibe
+    }」的创作灵感，这个事件是: ${topic}${
         topic.slice(-1) === "." ? "" : "."
     }`;
-
     e.preventDefault();
     setGeneratedBios("");
     setLoading(true);
@@ -84,20 +85,29 @@ const Home: NextPage = () => {
         </h2>
         {/*<p className=" text-slate-400 mt-2"></p>*/}
         <div className="max-w-xl w-full">
-          <div className="flex mt-10 items-center space-x-3">
+          <div className="flex mt-20 mb-3 items-center space-x-3">
+            <Image src="/1-black.png" width={24} height={24} alt="1 icon" />
+            <p className="text-left font-medium">输入某个人物或事件</p>
           </div>
           <textarea
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             rows={4}
-            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black mb-5"
             placeholder={
-              "输入某个人物、事件等"
+              "eg: 埃隆马斯克、脱口秀演员因不当言论被热议"
             }
           />
+          <div className="flex mb-3 items-center space-x-3">
+            <Image src="/2-black.png" width={24} height={24} alt="1 icon" />
+            <p className="text-left font-medium">选择内容形式</p>
+          </div>
+          <div className="block">
+            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
+          </div>
           {!loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-1 mt-1 hover:bg-black/80 w-full"
+              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-10 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
               获取创作灵感 &rarr;
