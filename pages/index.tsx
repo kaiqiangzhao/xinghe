@@ -86,7 +86,7 @@ const Home: NextPage = () => {
         {/*<p className=" text-slate-400 mt-2"></p>*/}
         <div className="max-w-xl w-full">
           <div className="flex mt-20 mb-3 items-center space-x-3">
-            <Image src="/1-black.png" width={24} height={24} alt="1 icon" />
+            <Image src="/1-black.png" width={22} height={22} alt="1 icon" />
             <p className="text-left font-medium">输入某个人物或事件</p>
           </div>
           <textarea
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
             }
           />
           <div className="flex mb-3 items-center space-x-3">
-            <Image src="/2-black.png" width={24} height={24} alt="1 icon" />
+            <Image src="/2-black.png" width={22} height={22} alt="1 icon" />
             <p className="text-left font-medium">选择内容形式</p>
           </div>
           <div className="block">
