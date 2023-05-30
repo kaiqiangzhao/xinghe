@@ -79,14 +79,14 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center text-center px-4 mt-12 sm:mt-24 mb-12 sm:mb-24">
-        <h2 className="sm:text-5xl text-4xl max-w-[808px] font-bold text-slate-900">
+      <main className="flex flex-1 w-full flex-col items-center text-center px-4 mt-12 sm:mt-24">
+        <h2 className="sm:text-5xl text-4xl max-w-[808px] font-bold text-slate-900 mb-6 sm:mb-12">
           使用 ChatGPT 生成创作灵感
         </h2>
         {/*<p className=" text-slate-400 mt-2"></p>*/}
         <div className="max-w-xl w-full">
-          <div className="flex mb-3 items-center space-x-3">
-            <Image src="/1-black.png" width={22} height={22} alt="1 icon" />
+          <div className="flex mb-3 items-center space-x-1">
+            <Image src="/1-black.png" width={20} height={20} alt="1 icon" />
             <p className="text-left font-medium">输入某个人物或事件</p>
           </div>
           <textarea
@@ -98,8 +98,8 @@ const Home: NextPage = () => {
               "eg: 埃隆马斯克、脱口秀演员因不当言论被热议"
             }
           />
-          <div className="flex mb-3 items-center space-x-3">
-            <Image src="/2-black.png" width={22} height={22} alt="1 icon" />
+          <div className="flex mb-3 items-center space-x-1">
+            <Image src="/2-black.png" width={20} height={20} alt="1 icon" />
             <p className="text-left font-medium">选择内容形式</p>
           </div>
           <div className="block">
