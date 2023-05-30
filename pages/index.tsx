@@ -159,7 +159,7 @@ const Home: NextPage = () => {
               className="sm:text-3xl text-2xl font-bold text-slate-900 mx-auto"
               ref={bioRef}
           >
-            热点事件
+            值得创作的热门话题
           </h2>
           <div className="flex justify-center text-slate-400 mt-1 text-sm">
             每周一更新（优化中），点击 <ChevronRightIcon className='h-5 w-5'></ChevronRightIcon> 即可查看创作灵感
